@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Icon';
+    src: url('Icon.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bold';
+    src: url('Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Icon', sans-serif;
+    font-family: 'Bold', sans-serif;
+}

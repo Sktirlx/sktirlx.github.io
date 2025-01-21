@@ -9,11 +9,6 @@
     <!-- 在这里添加对 BG.css 的引用 -->
     <link rel="stylesheet" href="asset/bg/bg.css">
 
-     <!-- 音乐播放器 -->
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>音乐播放器</title>
-     <link rel="stylesheet" href="asset/music/music.css">
 
     <!-- 添加自定义字体的 CSS 文件 -->
     <link rel="stylesheet" href="asset/fonts/fonts.css">
@@ -84,8 +79,8 @@
     </style>
 </head>
 <body>
-    <!-- 添加标题元素 -->
-    <h1 style="text-align: center; color: white; font-family: 'bold', sans-serif; font-size: 3em; margin-top: 50px;">PistachioClient</h1>
+   <!-- 添加标题元素 -->
+   <h1 style="text-align: center; color: white; font-family: 'bold', sans-serif; font-size: 3em; margin-top: 50px;">PistachioClient</h1>
 
     <!-- 添加菜单按钮 -->
     <div style="position: absolute; top: 0; right: 0; padding: 10px;">
@@ -93,22 +88,16 @@
     </div>
 
   <!-- 添加菜单内容 -->
-<div id="menu" class="menu-content">
-    <a href="index.html" target="_blank">Home</a>
-    <a href="download.html" target="_blank">Download</a>
-    <a href="dev.html" target="_blank">Dev</a>
-</div>
+    <div id="menu" class="menu-content">
+        <a href="index.html" target="_blank">Home</a>
+        <a href="download.html" target="_blank">Download</a>
+        <a href="dev.html" target="_blank">Dev</a>
+    </div>
 
     <!-- Start Home Area -->
     <div class="home-area stretch-bg">
         <!-- 这里是您的其他内容 -->
     </div>
-
-
-    <!-- 音乐播放器 -->
-    <audio id="musicPlayer" src="asset/music/mp3/YeQu.mp3" autoplay loop></audio>
-   
-    <script src="asset/music/music.js"></script>
 
     <!-- 添加菜单的 JavaScript 代码 -->
     <script>
@@ -117,17 +106,38 @@
             menu.classList.toggle("show");
         }
     </script>
-     
+
+     <!-- 添加下载按钮 -->
+    <div style="position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%);">
+        <a href="asset/download/Pistachio.jar" download>
+            <button class="download-button">Download</button>
+        </a>
+    </div>
 
     <!-- 添加自定义样式 -->
     <style>
+        .download-button {
+            background-color: rgba(0, 0, 0, 0.13);
+            color: rgb(255, 255, 255);
+            font-family: 'bold', sans-serif;
+            padding: 20px 40px; /* 增加按钮的内边距，使其看起来更大 */
+            border: none;
+            cursor: pointer;
+            border-radius: 50px;
+            font-size: 3.0em; /* 增加字体大小 */
+        }
+
+        .download-button:hover {
+            background-color: rgba(2, 2, 2, 0.411);
+        }
+
         /* 添加底部黑色条的样式 */
         .footer {
             position: fixed;
-            bottom: 20;
+            bottom: 0;
             left: 0;
             width: 100%;
-            height: 265px; /* 调整高度 */
+            height: 60px; /* 调整高度 */
             background-color: rgba(0, 0, 0, 0.151);
         }
 
@@ -139,50 +149,16 @@
             text-align: center; /* 文字居中显示 */
             color: rgb(255, 255, 255); /* 调整文字颜色 */
         }
+        /* 为Version和LastTime分别添加样式 */
+        .footer p span {
+            margin: 0 5px; /* 调整Version和LastTime之间的间距 */
+        }
     </style>
 
     <!-- 添加底部黑色条 -->
      <div class="footer">
-        <p>这是一个通过1.8.9版本修改制作的的黑客客户端</p>
-        <p>绕过的服务器↓</p>
-        <div class="image-container">
-            <div class="image-item">
-                <img src="asset/serverLogo/Hypixel.png" alt="Hypixel">
-                <p class="image-text">Hypixel</p>
-            </div>
-            <div class="image-item">
-                <img src="asset/serverLogo/Blocksmc.png" alt="BlocksMC">
-                <p class="image-text">BlocksMC</p>
-            </div>
-        </div>
+        <p><span>Version:b1</span><span>LastTime:2025/1/21</span></p>
     </div>
-  
-
-    <style>
-        .image-container {
-            display: flex; /* 使用flex布局 */
-            justify-content: center; /* 使图片和文字在容器中居中显示 */
-            align-items: center; /* 使图片和文字在垂直方向上居中对齐 */
-            flex-wrap: wrap; /* 允许图片换行 */
-        }
-
-        .image-item {
-            margin: 0 10px; /* 设置图片和文字之间的水平间距 */
-            text-align: center; /* 使文字在图片下方居中显示 */
-        }
-
-        .image-text {
-            font-family: 'bold', sans-serif; /* 使用自定义的“bold”字体 */
-            margin-top: 5px; /* 设置文字与图片之间的垂直间距 */
-        }
-
-        .image-item img {
-            display: block; /* 使图片在容器内居中显示 */
-            width: 100px; /* 设置图片的宽度 */
-            height: auto; /* 自动调整图片的高度，保持宽高比 */
-            margin: 0 auto; /* 使图片在容器内水平居中显示 */
-        }
-    </style>
 
 </body>
 </html>
